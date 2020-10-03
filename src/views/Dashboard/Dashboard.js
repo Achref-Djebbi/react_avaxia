@@ -54,7 +54,7 @@ export default function Dashboard() {
               </CardIcon>
               <p className={classes.cardCategory}>Used Space</p>
               <h3 className={classes.cardTitle}>
-                49/50 <small>GB</small>
+                100/200 <small>GB</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
