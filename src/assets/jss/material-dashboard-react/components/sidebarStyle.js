@@ -62,7 +62,7 @@ const sidebarStyle = theme => ({
   },
   logo: {
     position: "relative",
-    padding: "15px 15px",
+    padding: "20px 15px",
     zIndex: "4",
     "&:after": {
       content: '""',
@@ -96,12 +96,12 @@ const sidebarStyle = theme => ({
   logoImage: {
     width: "30px",
     display: "inline-block",
-    maxHeight: "30px",
+    maxHeight: "100px",
     marginLeft: "10px",
     marginRight: "15px"
   },
   img: {
-    width: "35px",
+    width: "150px",
     top: "22px",
     position: "absolute",
     verticalAlign: "middle",
