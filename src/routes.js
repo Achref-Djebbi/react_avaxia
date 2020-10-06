@@ -26,10 +26,12 @@ import Unarchive from "@material-ui/icons/Unarchive";
 import Language from "@material-ui/icons/Language";
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
+import Home from "views/Home/Home.js"
 import UserProfile from "views/UserProfile/UserProfile.js";
 import TableList from "views/TableList/TableList.js";
 import Typography from "views/Typography/Typography.js";
 import Icons from "views/Icons/Icons.js";
+
 
 
 
@@ -38,6 +40,14 @@ import Icons from "views/Icons/Icons.js";
 
 const dashboardRoutes = [
   {
+    path: "/Home",
+    name: "Home",
+    rtlName: "لوحة القيادة",
+    icon: "home",
+    component: Home,
+    layout: "/admin"
+  },
+  {
     path: "/dashboard",
     name: "Dashboard",
     rtlName: "لوحة القيادة",
@@ -45,6 +55,7 @@ const dashboardRoutes = [
     component: DashboardPage,
     layout: "/admin"
   },
+ 
   {
     path: "/user",
     name: "Monitoring",
