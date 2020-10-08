@@ -11,11 +11,15 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Icon from "@material-ui/core/Icon";
+import Divider from '@material-ui/core/Divider';
+
 // core components
 import AdminNavbarLinks from "components/Navbars/AdminNavbarLinks.js";
+
 import RTLNavbarLinks from "components/Navbars/RTLNavbarLinks.js";
 
 import styles from "assets/jss/material-dashboard-react/components/sidebarStyle.js";
+
 
 const useStyles = makeStyles(styles);
 
@@ -67,6 +71,7 @@ export default function Sidebar(props) {
                   })}
                 />
               )}
+              
               <ListItemText
                 primary={props.rtlActive ? prop.rtlName : prop.name}
                 className={classNames(classes.itemText, whiteFontClasses, {
@@ -74,10 +79,13 @@ export default function Sidebar(props) {
                 })}
                 disableTypography={true}
               />
+              <Divider />
             </ListItem>
+            
           </NavLink>
         );
       })}
+      
     </List>
   );
   var brand = (
@@ -118,6 +126,7 @@ export default function Sidebar(props) {
               style={{ backgroundImage: "url(" + image + ")" }}
             />
           ) : null}
+          
         </Drawer>
       </Hidden>
       <Hidden smDown implementation="css">
@@ -139,6 +148,7 @@ export default function Sidebar(props) {
               style={{ backgroundImage: "url(" + image + ")" }}
             />
           ) : null}
+         
         </Drawer>
       </Hidden>
     </div>

@@ -18,12 +18,20 @@ import Search from "@material-ui/icons/Search";
 // core components
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
+import { useHistory } from "react-router-dom";
 
 import styles from "assets/jss/material-dashboard-react/components/headerLinksStyle.js";
 
 const useStyles = makeStyles(styles);
 
 export default function AdminNavbarLinks() {
+
+  let history = useHistory();
+  
+  function handleClick() {
+    history.push("/LogPage");
+  }
+
   const classes = useStyles();
   const [openNotification, setOpenNotification] = React.useState(null);
   const [openProfile, setOpenProfile] = React.useState(null);
@@ -65,18 +73,7 @@ export default function AdminNavbarLinks() {
           <Search />
         </Button>
       </div>
-      <Button
-        color={window.innerWidth > 959 ? "transparent" : "white"}
-        justIcon={window.innerWidth > 959}
-        simple={!(window.innerWidth > 959)}
-        aria-label="Dashboard"
-        className={classes.buttonLink}
-      >
-        <Dashboard className={classes.icons} />
-        <Hidden mdUp implementation="css">
-          <p className={classes.linkText}>Dashboard</p>
-        </Hidden>
-      </Button>
+     
       <div className={classes.manager}>
         <Button
           color={window.innerWidth > 959 ? "transparent" : "white"}
@@ -95,6 +92,7 @@ export default function AdminNavbarLinks() {
             </p>
           </Hidden>
         </Button>
+        
         <Poppers
           open={Boolean(openNotification)}
           anchorEl={openNotification}
@@ -207,7 +205,7 @@ export default function AdminNavbarLinks() {
                     </MenuItem>
                     <Divider light />
                     <MenuItem
-                      onClick={handleCloseProfile}
+                     onClick={handleClick}
                       className={classes.dropdownItem}
                     >
                       Logout

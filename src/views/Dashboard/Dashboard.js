@@ -43,6 +43,8 @@ import {
 } from "variables/charts.js";
 
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
+import { NativeSelect } from "@material-ui/core";
+import SystemSelect from "components/systemselect/SystemSelect";
 
 const useStyles = makeStyles(styles);
 
@@ -52,6 +54,7 @@ export default function Dashboard() {
     <div>
       <GridContainer>
       <GridItem xs={12} sm={6} md={12}>
+        <SystemSelect />
           <Card>
           <CardContent >
           <Typography align="center" gutterBottom variant="h3" component="h2">
