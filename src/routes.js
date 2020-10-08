@@ -21,17 +21,19 @@ import Person from "@material-ui/icons/Person";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import BubbleChart from "@material-ui/icons/BubbleChart";
 import LocationOn from "@material-ui/icons/LocationOn";
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Unarchive from "@material-ui/icons/Unarchive";
 import Language from "@material-ui/icons/Language";
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
 import Home from "views/Home/Home.js"
+import LoginPage from "views/Login/LoginPage.js";
 import UserProfile from "views/UserProfile/UserProfile.js";
-import TableList from "views/TableList/TableList.js";
-import Typography from "views/Typography/Typography.js";
-import Icons from "views/Icons/Icons.js";
 
+import Icons from "views/Icons/Icons.js";
+import { Star, StarBorder } from "@material-ui/icons";
+import StarBorderIcon from '@material-ui/icons/StarBorder';
 
 
 
@@ -64,30 +66,19 @@ const dashboardRoutes = [
     component: UserProfile,
     layout: "/admin"
   },
+ 
+
   {
-    path: "/table",
-    name: "Table List",
-    rtlName: "قائمة الجدول",
-    icon: "content_paste",
-    component: TableList,
-    layout: "/admin"
-  },
-  {
-    path: "/typography",
-    name: "Typography",
-    rtlName: "طباعة",
-    icon: LibraryBooks,
-    component: Typography,
-    layout: "/admin"
-  },
-  {
+    
     path: "/icons",
-    name: "Icons",
-    rtlName: "الرموز",
-    icon: BubbleChart,
+    name: ".",
+    
+    icon: Star,
     component: Icons,
     layout: "/admin"
+    
   }
+ 
 ];
 
 export default dashboardRoutes;
