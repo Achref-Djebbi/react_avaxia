@@ -27,6 +27,7 @@ import Unarchive from "@material-ui/icons/Unarchive";
 import Language from "@material-ui/icons/Language";
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
+import TableList from "views/TableList/TableList.js";
 import Home from "views/Home/Home.js"
 import LoginPage from "views/Login/LoginPage.js";
 import UserProfile from "views/UserProfile/UserProfile.js";
@@ -64,6 +65,15 @@ const dashboardRoutes = [
     rtlName: "ملف تعريفي للمستخدم",
     icon: "desktop_windows",
     component: UserProfile,
+    layout: "/admin"
+  },
+
+  {
+    path: "/table",
+    name: "Tasks",
+    rtlName: "ملف تعريفي للمستخدم",
+    icon: "desktop_windows",
+    component: TableList,
     layout: "/admin"
   },
  
