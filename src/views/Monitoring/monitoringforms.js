@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
+import axios from "axios";
 // core components
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
@@ -12,7 +12,7 @@ import CardHeader from "components/Card/CardHeader.js";
 import TextField from '@material-ui/core/TextField';
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
-
+import MaterialUIForm from 'react-material-ui-form'
 //import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -23,6 +23,9 @@ import Input from '@material-ui/core/Input';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import  { useState } from 'react';
+import { useHistory } from "react-router-dom";
+
 //import { Landscape } from "@material-ui/icons";
 
 
@@ -61,92 +64,22 @@ const styles = {
 const useStyles = makeStyles(styles);
 
 export default function UserProfile() {
+  const [count, setCount] = useState(0);
+
+
+  
+
+
+
   const classes = useStyles();
-  
-  const [open, setOpen] = React.useState(false);
-  const [ccbji, setc] = React.useState('');
-  const [quadient, setq] = React.useState('');
-  const [system, setl] = React.useState('');
-  const [landscape, sets] = React.useState('');
-
-  const handleChange = (event) => {
-    setc(Number(event.target.value) || '');
-    setq(Number(event.target.value) || '');
-    setl(Number(event.target.value) || '');
-    sets(Number(event.target.value) || '');
-  };
+ 
+   
 
   
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
   return (
     <div>
+      
       <GridContainer>
-
-
-
-
-        
-      <GridItem xs={12} sm={12} md={12}>
-          <Card>
-                <CardBody>
-                <Button onClick={handleClickOpen}>Select The LandScape and the Systems</Button>
-      <Dialog disableBackdropClick disableEscapeKeyDown open={open} onClose={handleClose}>
-        <DialogTitle>Fill the form</DialogTitle>
-        <DialogContent>
-          <form className={classes.container}>
-            <FormControl className={classes.formControl}>
-              <InputLabel htmlFor="demo-dialog-native">LandScape</InputLabel>
-              <Select
-                native
-                value={landscape}
-                onChange={handleChange}
-                input={<Input id="demo-dialog-native" />}
-              >
-                <option aria-label="None" value="" />
-                <option>CCBJI</option>
-                <option>Quadient</option>
-                
-              </Select>
-            </FormControl>
-            <FormControl className={classes.formControl}>
-              <InputLabel id="demo-dialog-select-label">System</InputLabel>
-              <Select
-                labelId="demo-dialog-select-label"
-                id="demo-dialog-select"
-                value={system}
-                onChange={handleChange}
-                input={<Input />}
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem >PJR</MenuItem>
-                <MenuItem >PJE</MenuItem>
-                <MenuItem >PJA</MenuItem>
-              </Select>
-            </FormControl>
-          </form>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleClose} color="primary">
-            Ok
-          </Button>
-        </DialogActions>
-      </Dialog>
-                </CardBody>
-          </Card>
-      </GridItem>
-
-
 
 
         <GridItem xs={12} sm={12} md={12}>
@@ -198,7 +131,7 @@ export default function UserProfile() {
               
             </CardBody>
             <CardFooter>
-              <Button color="primary">Submit</Button>
+              <Button color="primary"  >Submit</Button>
             </CardFooter>
           </Card>
         </GridItem>
@@ -249,11 +182,11 @@ export default function UserProfile() {
               
             </CardBody>
             <CardFooter>
-              <Button color="primary">Submit</Button>
+              <Button color="primary"  >Submit</Button>
             </CardFooter>
           </Card>
         </GridItem>
-        <Button color="success">System Done</Button>
+        <Button color="success" >System Done</Button>
       </GridContainer>
     </div>
   );

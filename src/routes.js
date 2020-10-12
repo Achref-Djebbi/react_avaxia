@@ -27,14 +27,16 @@ import Unarchive from "@material-ui/icons/Unarchive";
 import Language from "@material-ui/icons/Language";
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
-import TableList from "views/TableList/TableList.js";
+
 import Home from "views/Home/Home.js"
 import LoginPage from "views/Login/LoginPage.js";
-import UserProfile from "views/UserProfile/UserProfile.js";
+
 
 import Icons from "views/Icons/Icons.js";
 import { Star, StarBorder } from "@material-ui/icons";
 import StarBorderIcon from '@material-ui/icons/StarBorder';
+import Monitoring from "views/Monitoring/monitoring";
+import Tasks from "views/Tasks/tasks";
 
 
 
@@ -60,20 +62,20 @@ const dashboardRoutes = [
   },
  
   {
-    path: "/user",
+    path: "/monitoring",
     name: "Monitoring",
     rtlName: "ملف تعريفي للمستخدم",
     icon: "desktop_windows",
-    component: UserProfile,
+    component: Monitoring,
     layout: "/admin"
   },
 
   {
-    path: "/table",
+    path: "/tasks",
     name: "Tasks",
     rtlName: "ملف تعريفي للمستخدم",
     icon: "desktop_windows",
-    component: TableList,
+    component: Tasks,
     layout: "/admin"
   },
  
