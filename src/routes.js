@@ -31,7 +31,7 @@ import DashboardPage from "views/Dashboard/Dashboard.js";
 import Home from "views/Home/Home.js"
 import LoginPage from "views/Login/LoginPage.js";
 
-
+import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 import Icons from "views/Icons/Icons.js";
 import { Star, StarBorder } from "@material-ui/icons";
 import StarBorderIcon from '@material-ui/icons/StarBorder';
@@ -74,7 +74,7 @@ const dashboardRoutes = [
     path: "/tasks",
     name: "Tasks",
     rtlName: "ملف تعريفي للمستخدم",
-    icon: "desktop_windows",
+    icon: AssignmentTurnedInIcon ,
     component: Tasks,
     layout: "/admin"
   },

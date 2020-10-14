@@ -49,8 +49,8 @@ class Monitoring extends Component{
   };
 
 componentDidMount =() => {
-  let  tcc=this.jibsys("ccbji")
-  let  tq=this.jibsys("quadiant")
+  let  tcc=this.loadsys("ccbji")
+  let  tq=this.loadsys("quadiant")
 
   this.setState({
   ccbjisy:tcc,
@@ -63,7 +63,7 @@ componentDidMount =() => {
 
 
 
- jibsys = (sys) => {
+loadsys = (sys) => {
     let cci=1;
     let qi=1;
     let ccbji=[];
